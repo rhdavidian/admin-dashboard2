@@ -1,0 +1,138 @@
+* {
+    font-family: sans-serif ;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+img {
+    height: 1.3rem;
+    width: auto;
+}
+.guitar {
+    height: 3rem;
+}
+
+.container {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: minmax(209px, 1.2fr) minmax(456px,4fr);
+    grid-template-rows: 1fr 4fr;
+  }
+
+  .header {
+    background-color: white;
+    grid-area: 1/2/2/3;
+    box-shadow: -3px 2px 3px grey;
+    margin-bottom: 5px;
+    padding: 10px;
+    gap: 10px;
+
+    display: grid;
+  }
+
+  .headerRowOne {
+    grid-area: 1/1/2/2;
+    display: grid;
+    height: 35px;
+    grid-template-columns: 2.5fr 1fr;
+    align-items: center;
+  }
+  .rowOneColOne {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+  .rowOneColTwo {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+  }
+  input {
+    border-radius: 25px;
+    border: 2px solid black;
+    width: 80%;
+    margin-left: 10px;
+    background-color: rgb(226, 223, 223);
+  }
+
+  .headerRowTwo {
+    grid-area: 2/1/3/2;
+    height: 100px;
+    display: grid;
+    align-items: center;
+    grid-template: 50px 50px / auto 2fr auto;
+    grid-auto-flow: column;
+  }
+  .guitarBig {
+    align-self: center;
+    height: 3.5rem;
+    grid-area: 1/1/3/2;
+}
+.hi {
+    font-size: 10pt;
+    grid-area: 1/2/2/3;
+    margin: 0px 0px -15px 10px;
+}
+.name {
+    grid-area: 2/2/3/3;
+    font-size: 12pt;
+    margin: -15px 0px 0px 10px;
+}
+.buttons {
+    grid-area: 1/3/3/4;
+}
+button {
+    background-color: rgba(16, 129, 221, 0.857);
+    color: white;
+    border-radius: 25px;
+    border: none;
+    padding: 8px 20px;
+    margin: 10px;
+}
+
+  .sidebar {
+    padding: 20px;
+    color: white;
+    background-color: rgb(45, 122, 217);
+    grid-area: 1/1/3/2;
+    display: grid;
+    justify-items: start;
+    grid-template-rows: 100px repeat(10, 50px);
+  }
+ .sidebar>h2,
+ .sidebar>p {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+ }
+
+  img.icons,
+  .dashIcon {
+    filter: invert(97%) sepia(16%) saturate(0%) hue-rotate(35deg) 
+    brightness(104%) contrast(103%);
+    margin-right: 10px;
+    align-items: center;
+}
+
+.dashIcon {
+    height: 2rem;
+}
+
+  .dashboard {
+    background-color: rgb(241, 237, 237);
+    grid-area: 2/2/3/3;
+    text-align: center;
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fit, 200px);
+  }
+  .projects {
+    background-color: white;
+    border-radius: 25px;
+    border: 2px black;
+    height: 225px;
+  }
+
