@@ -4,8 +4,8 @@
 body,
 html {
   height: 100%;
-  /* width: 99%; */
-  margin: auto;
+  margin: 5px;
+  background-color: darkgrey;
 }
 
 img {
@@ -19,7 +19,6 @@ img {
 .container {
     box-sizing: border-box;
     display: grid;
-    /* max-width: 100vw; */
     grid-template-columns: minmax(209px, 1fr) minmax(560px,3.5fr) minmax(240px, 1.2fr);
     grid-template-rows: 150px 4fr;
   }
@@ -30,8 +29,6 @@ img {
     box-shadow: -3px 2px 3px grey;
     margin-bottom: 5px;
     padding: 10px 10px 10px 35px;
-    /* gap: 10px; */
-    /* max-height: 140px; */
     display: grid;
   }
 
@@ -130,14 +127,23 @@ button {
     display: grid;
     gap: 20px;
     padding: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+
+    grid-template-rows: 25px .5fr;
+
+    grid-template-columns: repeat(auto-fill, minmax(240px, .9fr));
+  }
+
+  .dashTitle{
+    grid-area: 1/1/2/-1;
+    justify-self: start;
+    align-self: end;
   }
   .projects {
     background-color: white;
     border-radius: 8px;
     border-left: 6px solid goldenrod;
     height: 140px;
-    padding: 9px;
+    padding: 10px;
     display: grid;
     grid-template: 1fr 3fr 1fr / 4fr repeat(3, 1fr);
     justify-items: start;
@@ -163,6 +169,63 @@ button {
     text-align: left;
     font-weight: 100;
   }
+
   .announcements {
+    display: grid;
     grid-area: 2/3/3/4;
+    background-color: rgb(241, 237, 237);
+    gap: 7px;
+    padding: 10px;
+    /* height: minmax(550px, 1fr); */
+    grid-template-rows: 35px 1fr 35px 1fr;
+    /* grid-template-columns: 1fr; */
+  }
+  .announceTitle,
+  .trendTitle {
+    align-self: end;
+  }
+  .announceBox {
+    grid-row: 2/3;
+    display: grid;
+    border-radius: 8px;
+    align-items: center;
+    padding: 12px;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: white;
+  }
+
+  .announce,
+  .lastAnnounce {
+    display: grid;
+    grid-template-rows: 20px 1fr;
+  }
+  .announce :last-child{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 9px;
+  }
+  .announce :first-child,
+  .lastAnnounce :first-child {
+    font-size: 10pt;
+    font-weight: 500;
+    align-self: end;
+  }
+  .announce :last-child,
+  .lastAnnounce :last-child {
+    font-size: 9pt;
+    font-weight: lighter;
+  }
+
+  .trendingBox {
+    grid-row: 4/5;
+    display: grid;
+    border-radius: 8px;
+    align-items: center;
+    padding: 12px;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: white;
+  }
+  .user {
+    align-self: center;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 3fr;
   }
