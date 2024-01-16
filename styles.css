@@ -181,7 +181,7 @@ button {
   }
   .announceTitle,
   .trendTitle {
-    align-self: end;
+    align-self: center;
   }
   .announceBox {
     grid-row: 2/3;
